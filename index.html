@@ -8,7 +8,20 @@
   {% for curso in site.data.horario.cursos %}
     <h2> {{curso.nome}} </h2>
     {% for turma in curso.turmas %}
-      <h3>{{turma.nome}}</h3> 
-{% endfor %}
+      <h3>{{turma.nome}}</h3>
+        <table>
+          <tr>
+            <th>HORA</th>
+            <th>SEGUNDA-FEIRA</th>
+            <th>TERÇA-FEIRA</th>
+           <th>QUARTA-FEIRA</th>
+           <th>QUINTA-FEIRA</th>
+           <th>SEXTA-FEIRA</th>
+    
+  </tr>
+            
+          </tr>
+        </table>
+    {% endfor %}
   {% endfor %}
 
