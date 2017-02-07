@@ -10,6 +10,23 @@
     {% for turma in curso.turmas %}
       <h3>{{turma.nome}}</h3>
         <table>
+          font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+td, th {
+    border: 3px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+<body>
+          
           <tr>
             <th>HORA</th>
             <th>SEGUNDA-FEIRA</th>
@@ -17,9 +34,7 @@
            <th>QUARTA-FEIRA</th>
            <th>QUINTA-FEIRA</th>
            <th>SEXTA-FEIRA</th>
-    
-  </tr>
-            
+          </tr>
           </tr>
         </table>
     {% endfor %}
