@@ -2,3 +2,11 @@
 ---
 
 <h1>Teste 1</h1>
+
+<h1>Hello</h1>
+
+<table>
+  {% for row in page.data.cursos %}
+    <h2> {{row.nome}} </h2>
+  {% endfor %}
+</table>
