@@ -11,19 +11,13 @@
     <h2> {{curso.nome}} </h2>
     {% for turma in curso.turmas %}
       <h3>{{turma.nome}}</h3>
-        
-<body>
-          
-          <tr>
-            <th>HORA</th>
-            <th>SEGUNDA-FEIRA</th>
-            <th>TERÇA-FEIRA</th>
-           <th>QUARTA-FEIRA</th>
-           <th>QUINTA-FEIRA</th>
-           <th>SEXTA-FEIRA</th>
-          </tr>
-          </tr>
-        </table>
+      <table>
+        <tr>
+        {% for coluna in colunas %}
+          <th>{{coluna}}</th>
+        {% endfor %}
+        </tr>
+       </table>
     {% endfor %}
   {% endfor %}
 
