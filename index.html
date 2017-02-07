@@ -5,7 +5,10 @@
 
 <h1>Olá</h1>
 
-  {% for row in site.data.horario.cursos %}
-    <h2> {{row.nome}} </h2>
+  {% for curso in site.data.horario.cursos %}
+    <h2> {{curso.nome}} </h2>
+    {% for turma in curso.turmas %}
+      <h3>{{turma.nome}}</h3> 
+{% endfor %}
   {% endfor %}
 
