@@ -1,19 +1,15 @@
 ---
 ---
 
-<h1>Horario</h1>
-
-<h1>Curso</h1>
-
-  {% for curso in site.data.horario.cursos %}
-    <h2> {{curso.nome}} </h2>
-    {% for turma in curso.turmas %}
-      <h3>{{turma.nome}}</h3>
-        <table>
-          font-family: arial, sans-serif;
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    }
+}
 
 td, th {
     border: 3px solid #dddddd;
@@ -24,7 +20,20 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+</style>
+</head>
+<body>
 
+
+<h1>Horario</h1>
+
+<h1>Curso</h1>
+
+  {% for curso in site.data.horario.cursos %}
+    <h2> {{curso.nome}} </h2>
+    {% for turma in curso.turmas %}
+      <h3>{{turma.nome}}</h3>
+        
 <body>
           
           <tr>
