@@ -22,22 +22,22 @@
 
 
 
- <p >  {% for curso in site.data.horario.cursos %}
-    <h2> {{curso.nome}} </h2>
+   {% for curso in site.data.horario.cursos %}
+   <p > <h2> {{curso.nome}} </h2></p>
     {% for turma in curso.turmas %}
-      <h3>{{turma.nome}}</h3>
+    <p >  <h3>{{turma.nome}}</h3></p >
       <table>
         <tr>
         {% for coluna in turma.colunas %}
-          <th>{{coluna}}</th>
+        <p >  <th>{{coluna}}</th></p >
         {% endfor %}
         </tr>
         
         {% for linha in turma.linhas %}
           <tr>
-          <td>{{linha.horario}}</td>
+         <p > <td>{{linha.horario}}</td></p >
           {% for aula in linha.aulas %}
-            <td>{{aula.disciplina}} <br/> {{aula.professor}}</td> 
+           <p > <td>{{aula.disciplina}} <br/> {{aula.professor}}</td> </p >
           {% endfor %}
           </tr>
        {% endfor %}
@@ -45,7 +45,7 @@
     {% endfor %}
   {% endfor %}
 
-</p>
+
 
 
 
