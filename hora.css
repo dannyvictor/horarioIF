@@ -1,17 +1,19 @@
 div {
 	border-radius: 5px;
 	border: 2px solid DarkSlateGray;
-	background-color: white;
-	height:120px;
-	width: 120px;
+	background-color: black;
+	height:50px;
+	width: 50px;
 	margin: auto;
-	text-aling: center;
+	display: flex;
+  	justify-content: center;
+	
 	
 } 
 #HT {
 margin-top: 60px;
 font-family: Arial;
-font-size: 40px;
+font-size: 30px;
 color: white;
 }
 h1{
