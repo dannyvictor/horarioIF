@@ -2,7 +2,7 @@
 <html> 
   <head>
 
-		<link  rel="stylesheet" href="hora.css"/>
+		<link   href="hora.css"/>
 
  <link rel="icon" type="image/png" sizes="96x96" href="http://images.uncyc.org/pt/8/8d/AApagar.png">
  <title> Horário IFPB - GBA </title>
@@ -27,21 +27,21 @@
 
 
    {% for curso in site.data.horario.cursos %}
-   <p > <h2> {{curso.nome}} </h2></p>
+    <h2> {{curso.nome}} </h2>
     {% for turma in curso.turmas %}
-    <p >  <h3>{{turma.nome}}</h3></p >
+      <h3>{{turma.nome}}</h3>
       <table>
         <tr>
         {% for coluna in turma.colunas %}
-        <p >  <th>{{coluna}}</th></p >
+         <th>{{coluna}}</th>
         {% endfor %}
         </tr>
         
         {% for linha in turma.linhas %}
           <tr>
-         <p > <td>{{linha.horario}}</td></p >
+          <td>{{linha.horario}}</td>
           {% for aula in linha.aulas %}
-           <p > <td>{{aula.disciplina}} <br/> {{aula.professor}}</td> </p >
+            <td>{{aula.disciplina}} <br/> {{aula.professor}}</td> 
           {% endfor %}
           </tr>
        {% endfor %}
