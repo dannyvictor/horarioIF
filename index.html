@@ -22,7 +22,7 @@
 
 
 
-  {% for curso in site.data.horario.cursos %}
+ <p id="PAR" >  {% for curso in site.data.horario.cursos %}
     <h2> {{curso.nome}} </h2>
     {% for turma in curso.turmas %}
       <h3>{{turma.nome}}</h3>
@@ -44,5 +44,7 @@
        </table>
     {% endfor %}
   {% endfor %}
+</p></br>
 
-<body background="https://github.com/dannyvictor/horarioIF/blob/master/white-1714170_1920.jpg">
+
+
