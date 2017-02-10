@@ -9,12 +9,12 @@ div {
 } 
 
 table{
-	width: 467px; 
+	width: 800px; 
 	border:1px;
 }
 td{
-	width:101px;
-	height:40px;
+	width:200px;
+	height:100px;
 }
 h4 {
 margin-top: 60px;
