@@ -1,9 +1,9 @@
 div {
 	border-radius: 5px;
-	border: 2px solid white;
+	border: 2px solid #006400;
 	background-color: #32CD32;
 	height:30px;
-	width: 70px;
+	width: 85px;
 	text-align: center;
 	margin-left: 50em;
 } 
@@ -15,6 +15,7 @@ table{
 }
 td{
 	width:90px;
+	border: 2px solid #006400;
 	font color:#32CD32;
 	margin-left: 3em;
 }
