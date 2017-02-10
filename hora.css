@@ -5,16 +5,16 @@ div {
 	height:30px;
 	width: 85px;
 	text-align: center;
-	margin-left: 65em;
+	margin-left: 75em;
 } 
 
 table{
-	width: 90px; 
+	width: 110px; 
 	margin-left: 10em;
 	border: 5px;
 }
 td{
-	width:90px;
+	width:110px;
 	border: 2px solid #006400;
 	font color:#32CD32;
 	margin-left: 3em;
