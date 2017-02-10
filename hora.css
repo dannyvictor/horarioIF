@@ -5,6 +5,7 @@ div {
 	height:30px;
 	width: 60px;
 	text-align: center;
+	margin-left: 10em;
 } 
 
 table{
@@ -29,13 +30,4 @@ font-size: 20px;
 color: black;
 text-align: center;
 }
-p{ 
 
-	
-	text-decoration: none;
-	color: white;
-	font-family: arial;
-	font-size: 16px;
-	margin-left: 2em;
-	text-align: justify;
-}
