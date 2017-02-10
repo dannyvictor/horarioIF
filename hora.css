@@ -7,10 +7,12 @@ div {
 } 
 
 table{
-	width="467" border="1px";
+	width: 467px; 
+	border:1px;
 }
 td{
-	width="101" height="40";
+	width:101px;
+	height:40px;
 }
 h4 {
 margin-top: 60px;
