@@ -5,12 +5,12 @@ div {
 	height:30px;
 	width: 70px;
 	text-align: center;
-	margin-left: 20em;
+	margin-left: 25em;
 } 
 
 table{
 	width: 75px; 
-	
+	margin-left: 10em;
 	border: 5px;
 }
 td{
