@@ -5,18 +5,18 @@ div {
 	height:30px;
 	width: 70px;
 	text-align: center;
-	margin-left: 25em;
+	margin-left: 50em;
 } 
 
 table{
-	width: 75px; 
+	width: 90px; 
 	margin-left: 10em;
 	border: 5px;
 }
 td{
-	width:75px;
+	width:90px;
 	font color:#32CD32;
-	
+	margin-left: 3em;
 }
 h4 {
 margin-top: 60px;
