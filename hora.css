@@ -10,7 +10,8 @@ div {
 
 table{
 	width: 110px; 
-	border:2px;
+	
+	border-radius: 5px;
 }
 td{
 	width:110px;
