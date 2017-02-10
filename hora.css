@@ -3,12 +3,12 @@ div {
 	border: 2px solid white;
 	background-color: black;
 	height:30px;
-	width: 60px;
-
-	
-	
-	
+	width: 60px;	
 } 
+
+table{
+	border:"1";
+}
 h4 {
 margin-top: 60px;
 font-family: Arial;
