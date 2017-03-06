@@ -51,3 +51,51 @@
 
 
 
+
+
+
+
+
+
+
+
+{% for profx in site.data.horarioProfessor.professores %}
+<div id="{{profx}}" style="display: none">
+    <h1> {{profx}} </h1>
+    {% for curso in site.data.horarios.cursos %}
+        {% for turma in curso.turmas %}
+            <div class="table-responsive container w3-center">
+            <h1>{{ turma.nome }}</h1>
+            <table class="table text-center">
+            <tr>
+            {% for coluna in turma.colunas %}
+                <th class="text-center w3-theme-green">{{ coluna }}</th>
+            {% endfor %}
+            </tr>
+            {% for linha in turma.linhas %}
+            <tr>
+                <td class="w3-theme-green">{{linha.horario}}</td>
+                {% for aula in linha.aulas %}
+                    {% if aula.disciplina == "INTERVALO" or aula.disciplina == "JANTAR" or aula.disciplina == "ALMOÇO" %}
+                        <td colspan="5" class="w3-theme-light">{{aula.disciplina}}</td>
+                        {% break %}
+                    {% else %}
+		    	{% if aula.professor == profx%}
+				<td class="w3-theme-light">{{aula.disciplina}}<br>{{aula.professor}}</td>
+		    	{% else %}
+		    		<td> <br/> </td>
+		    	{% endif %}
+                    {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+            </table>
+            </div>
+        {% endfor %}
+    {% endfor %}
+</div>
+{% endfor %}
+
+
+
+
