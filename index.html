@@ -8,6 +8,11 @@
  <link rel="icon" type="image/png" sizes="96x96" href="http://images.uncyc.org/pt/8/8d/AApagar.png">
  <title> Horário IFPB - GBA </title>
 	<script src="js/myjs.js"></script>
+	<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
  </head>
 
 <body>
@@ -38,7 +43,7 @@
     <h2><center> {{curso.nome}} </center></h2>
     {% for turma in curso.turmas %}
       <h3><center>{{turma.nome}}<center></h3>
-      <table >
+      <table class="striped">
         <tr>
         {% for coluna in turma.colunas %}
          <th>{{coluna}}</th>
