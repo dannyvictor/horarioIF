@@ -35,9 +35,9 @@
 	<div id="{{prof}}" class="dany" style="display: none">
 	<h1>{{prof}}</h1>
    {% for curso in site.data.horario.cursos %}
-    <h2> {{curso.nome}} </h2>
+    <h2><center> {{curso.nome}} </center></h2>
     {% for turma in curso.turmas %}
-      <h3>{{turma.nome}}</h3>
+      <h3><center>{{turma.nome}}<center></h3>
       <table >
         <tr>
         {% for coluna in turma.colunas %}
