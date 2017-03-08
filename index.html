@@ -25,7 +25,7 @@
 	
 
 {% for prof in site.data.hprofessores.professores %}
-	{{prof}}
+	<h1>{{prof}}</h1>
    {% for curso in site.data.horario.cursos %}
     <h2> {{curso.nome}} </h2>
     {% for turma in curso.turmas %}
