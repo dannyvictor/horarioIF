@@ -50,7 +50,11 @@
           <tr>
           <td>{{linha.horario}}</td>
           {% for aula in linha.aulas %}
-            <td>{{aula.disciplina}} <br/> {{aula.professor}}</td> 
+		{% if aula.professor == prof or prof == "Todos" %}
+		  <td>{{aula.disciplina}} <br/> {{aula.professor}}</td> 
+		  {% else %}
+		  <td> <br/> </td> 
+		  {% endif %}     
           {% endfor %}
           </tr>
        {% endfor %}
