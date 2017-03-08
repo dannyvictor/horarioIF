@@ -1,38 +1,4 @@
-div {
-	border-radius: 5px;
-	border: 2px solid #006400;
-	background-color: #32CD32;
-	height:30px;
-	width: 85px;
-	text-align: center;
-	margin-left: 38em;
-} 
 
-table{
-	width: 1000px; 
-	margin-left: 10em;
-	border: 5px;
-}
-td{
-	width:300px;
-	border: 2px solid #006400;
-	font color:#32CD32;
-	margin-left: 5em;
-}
-h4 {
-margin-top: 60px;
-font-family: Arial;
-font-size: 30px;
-color: black;
-text-align: center;
-}
-h1{
-margin-top: 60px;
-font-family: Arial;
-font-size: 20px;
-color: black;
-text-align: center;
-}
 .dropbtn {
     background-color: #4CAF50;
     color: white;
