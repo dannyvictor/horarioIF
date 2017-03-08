@@ -27,16 +27,13 @@
 <button onclick="myFunction()" class="dropbtn">Dropdown</button>
   <div id="myDropdown" class="dropdown-content">
     <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-    <a href="#about">About</a>
-    <a href="#base">Base</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-    <a href="#custom">Custom</a>
-    <a href="#support">Support</a>
-    <a href="#tools">Tools</a>
+    {% for profz in site.data.hprofessor.professores %}
+	  <p onclick="Botao('{{profz}}')">{{profz}} </p>
+	  {% endfor %}
   </div>
 </div>
 {% for prof in site.data.hprofessor.professores %}
+	<div id="{{prof}}" class="dany" style="display: none">
 	<h1>{{prof}}</h1>
    {% for curso in site.data.horario.cursos %}
     <h2> {{curso.nome}} </h2>
@@ -60,6 +57,7 @@
        </table>
     {% endfor %}
   {% endfor %}
+</div>
 {% endfor %}
 
 
