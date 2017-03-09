@@ -28,3 +28,13 @@ function Botao(professor) {
   }
     document.getElementById(professor).style.display = "block";
 }
+
+function Professor(){
+       document.getElementById('turmas').style.display = "none";
+       document.getElementById('professores').style.display = "block";
+}
+
+function Turma(){
+       document.getElementById('professores').style.display = "none";
+       document.getElementById('turmas').style.display = "block";
+}
