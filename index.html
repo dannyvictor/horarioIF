@@ -3,14 +3,16 @@ layout: default
 ---
 
 <center id="professores" style="display:none">
-	<div class="dropdown">
-		<div id="myDropdownProfessor" class="dropdown-content" style="height:200px">
-			<input type="text" placeholder="Search.." id="myInputProfessor" onkeyup="filterFunction('myDropdownProfessor','myInputProfessor')">
-			{% for profz in site.data.hprofessor.professores %}
-				<p onclick="Botao('{{profz}}')">{{profz}} </p>
-			{% endfor %}
-		</div>
-	</div>
+	<div class="dropdown" style="box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);border: 1px solid #ccc;border-radius: 20px;width:50%;margin-top:10px">
+		<div id="myDropdownTurma">
+			<input type="text" placeholder="Search.." id="myInputTurma" onkeyup="filterFunction('myDropdownTurma','myInputTurma')" style="width:90%;margin-top:10px">
+			<div class="dropdown-content" style="width:200px;height:200px;margin-top:10px;background-color:white">
+				{% for profz in site.data.hprofessor.professores %}
+					<p onclick="Botao('{{profz}}')">{{profz}} </p>
+				{% endfor %}
+			</div>
+		</div>	
+  	</div>
 	{% for professor in site.data.horario.professores %}
 		<div id="{{professor.nome}}" class="dany" style="display:none">
 		      <center>
@@ -38,12 +40,14 @@ layout: default
 	{% endfor %}
 </center>
 <center id="turmas" style="display:none">
-	<div class="dropdown">
+	<div class="dropdown" style="box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);border: 1px solid #ccc;border-radius: 20px;width:50%;margin-top:10px">
 		<div id="myDropdownTurma" class="dropdown-content" style="height:200px">
 			<input type="text" placeholder="Search.." id="myInputTurma" onkeyup="filterFunction('myDropdownTurma','myInputTurma')">
-			{% for turmaz in site.data.hturma.turmas %}
-				<p onclick="Botao('{{turmaz}}')">{{turmaz}} </p>
-			{% endfor %}
+			<div class="dropdown-content" style="width:200px;height:200px;margin-top:10px;background-color:white">
+				{% for turmaz in site.data.hturma.turmas %}
+					<p onclick="Botao('{{turmaz}}')">{{turmaz}} </p>
+				{% endfor %}
+			</div>
 		</div>
 	</div>
 	{% for curso in site.data.horario.cursos %}
