@@ -14,7 +14,7 @@ layout: default
 		</div>	
   	</div>
 	{% for professor in site.data.horario.professores %}
-		<div id="{{professor.nome}}" class="dany" style="display:none">
+		<div id="{{professor.nome}}" class="dany" style="display:none;box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);border: 1px solid #ccc;border-radius: 20px;">
 		      <center>
 			      <h3>{{professor.nome}}</h3>
 		      </center>	   
@@ -57,7 +57,7 @@ layout: default
 	</div>
 	{% for curso in site.data.horario.cursos %}
 		{% for turma in curso.turmas %}
-		      <div id="{{turma.nome}}" class="dany" style="display:none">
+		      <div id="{{turma.nome}}" class="dany" style="display:none;box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);border: 1px solid #ccc;border-radius: 20px;">
 			      <center>
 				      <h3>{{turma.nome}}</h3>
 			      </center>	   
