@@ -3,11 +3,10 @@ layout: default
 ---
 
 <div id="professores">
-	<div class="bug" style="display:none">
+	<div class="bug">
 		<div class="dropdown">
-		<button onclick="myFunction()" class="dropbtn">Dropdown</button>
-			<div id="myDropdown" class="dropdown-content">
-				<input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+			<div id="myDropdownProfessor" class="dropdown-content">
+				<input type="text" placeholder="Search.." id="myInputProfessor" onkeyup="filterFunction('myDropdownProfessor','myInputProfessor')">
 				{% for profz in site.data.hprofessor.professores %}
 					<p onclick="Botao('{{profz}}')">{{profz}} </p>
 				{% endfor %}
@@ -41,15 +40,12 @@ layout: default
     {% endfor %}
 </div>
 <div id="turmas">
-	<div class="bug" style="display:none">
-		<div class="dropdown">
-		<button onclick="myFunction()" class="dropbtn">Dropdown</button>
-			<div id="myDropdown" class="dropdown-content">
-				<input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-				{% for turmaz in site.data.hturma.turmas %}
-					<p onclick="Botao('{{turmaz}}')">{{turmaz}} </p>
-				{% endfor %}
-			</div>
+	<div class="bug">
+		<div id="myDropdownTurma" class="dropdown-content">
+			<input type="text" placeholder="Search.." id="myInputTurma" onkeyup="filterFunction('myDropdownTurma','myInputTurma')">
+			{% for turmaz in site.data.hturma.turmas %}
+				<p onclick="Botao('{{turmaz}}')">{{turmaz}} </p>
+			{% endfor %}
 		</div>
 	</div>
     {% for curso in site.data.horario.cursos %}
