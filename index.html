@@ -31,10 +31,10 @@ layout: default
 				  <td>{{linha.horario}}</td>
 				  {% for aula in linha.aulas %}
 					  {% if aula.disciplina == "ALMOÇO" or aula.disciplina == "INTERVALO" or aula.disciplina == "JANTAR" %}
-						<td colspan="5">{{aula.disciplina}}<br/>{{aula.professor}}</td>
+						<td colspan="5">{{aula.disciplina}}<br/>{{aula.turma}}</td>
 					  	{% break %}
 					  {% else %}
-						<td>{{aula.disciplina}}<br/>{{aula.professor}}</td>
+						<td>{{aula.disciplina}}<br/>{{aula.turma}}</td>
 					  {% endif %}
 				  {% endfor %}
 				  </tr>
