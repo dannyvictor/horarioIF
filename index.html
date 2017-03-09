@@ -2,71 +2,33 @@
 layout: default
 ---
 
-<div id="professores">
-	<div class="bug">
-		<div class="dropdown">
-			<div id="myDropdownProfessor" class="dropdown-content">
-				<input type="text" placeholder="Search.." id="myInputProfessor" onkeyup="filterFunction('myDropdownProfessor','myInputProfessor')">
-				{% for profz in site.data.hprofessor.professores %}
-					<p onclick="Botao('{{profz}}')">{{profz}} </p>
-				{% endfor %}
-			</div>
-		</div>
-	</div>
-    {% for professor in site.data.horario.professores %}
-      <div id="{{professor.nome}}" class="dany" style="display:none">
-	      <center>
-		      <h3>{{professor.nome}}</h3>
-	      </center>	   
-	      <div class="container">
-		      <table class="table table-striped">
-			<tr>
-			{% for coluna in professor.colunas %}
-				<th>{{coluna}}</th>
-			{% endfor %}
-			</tr>
-
-			{% for linha in professor.linhas %}
-			  <tr>
-			  <td>{{linha.horario}}</td>
-			  {% for aula in linha.aulas %}
-				  <td>{{aula.disciplina}}<br/>{{aula.turma}}</td>
-			  {% endfor %}
-			  </tr>
-		       {% endfor %}
-		       </table>
-		</div>
-	</div>
-    {% endfor %}
-</div>
-<div id="turmas">
-	<div class="bug">
-		<div id="myDropdownTurma" class="dropdown-content">
-			<input type="text" placeholder="Search.." id="myInputTurma" onkeyup="filterFunction('myDropdownTurma','myInputTurma')">
-			{% for turmaz in site.data.hturma.turmas %}
-				<p onclick="Botao('{{turmaz}}')">{{turmaz}} </p>
+<center id="professores">
+	<div class="dropdown">
+		<div id="myDropdownProfessor" class="dropdown-content" style="height:200px">
+			<input type="text" placeholder="Search.." id="myInputProfessor" onkeyup="filterFunction('myDropdownProfessor','myInputProfessor')">
+			{% for profz in site.data.hprofessor.professores %}
+				<p onclick="Botao('{{profz}}')">{{profz}} </p>
 			{% endfor %}
 		</div>
 	</div>
-    {% for curso in site.data.horario.cursos %}
-	{% for turma in curso.turmas %}
-	      <div id="{{turma.nome}}" class="dany" style="display:none">
+	{% for professor in site.data.horario.professores %}
+		<div id="{{professor.nome}}" class="dany" style="display:none">
 		      <center>
-			      <h3>{{turma.nome}}</h3>
+			      <h3>{{professor.nome}}</h3>
 		      </center>	   
 		      <div class="container">
 			      <table class="table table-striped">
 				<tr>
-				{% for coluna in turma.colunas %}
+				{% for coluna in professor.colunas %}
 					<th>{{coluna}}</th>
 				{% endfor %}
 				</tr>
 
-				{% for linha in turma.linhas %}
+				{% for linha in professor.linhas %}
 				  <tr>
 				  <td>{{linha.horario}}</td>
 				  {% for aula in linha.aulas %}
-					  <td>{{aula.disciplina}}<br/>{{aula.professor}}</td>
+					  <td>{{aula.disciplina}}<br/>{{aula.turma}}</td>
 				  {% endfor %}
 				  </tr>
 			       {% endfor %}
@@ -74,8 +36,44 @@ layout: default
 			</div>
 		</div>
 	{% endfor %}
-    {% endfor %}
-</div>
+</center>
+<center id="turmas">
+	<div class="dropdown">
+		<div id="myDropdownTurma" class="dropdown-content" style="height:200px">
+			<input type="text" placeholder="Search.." id="myInputTurma" onkeyup="filterFunction('myDropdownTurma','myInputTurma')">
+			{% for turmaz in site.data.hturma.turmas %}
+				<p onclick="Botao('{{turmaz}}')">{{turmaz}} </p>
+			{% endfor %}
+		</div>
+	</div>
+	{% for curso in site.data.horario.cursos %}
+		{% for turma in curso.turmas %}
+		      <div id="{{turma.nome}}" class="dany" style="display:none">
+			      <center>
+				      <h3>{{turma.nome}}</h3>
+			      </center>	   
+			      <div class="container">
+				      <table class="table table-striped">
+					<tr>
+					{% for coluna in turma.colunas %}
+						<th>{{coluna}}</th>
+					{% endfor %}
+					</tr>
+
+					{% for linha in turma.linhas %}
+					  <tr>
+					  <td>{{linha.horario}}</td>
+					  {% for aula in linha.aulas %}
+						  <td>{{aula.disciplina}}<br/>{{aula.professor}}</td>
+					  {% endfor %}
+					  </tr>
+				       {% endfor %}
+				       </table>
+				</div>
+			</div>
+		{% endfor %}
+	{% endfor %}
+</center>
 
 
 
